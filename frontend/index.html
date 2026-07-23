@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>AI Inventory Management System</h1>
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Total Products</h3>
+<p id="totalProducts">0</p>
+</div>
+
+<div class="card">
+<h3>Inventory Value</h3>
+<p id="inventoryValue">₹0</p>
+</div>
+
+<div class="card">
+<h3>Total Sales</h3>
+<p id="totalSales">0</p>
+</div>
+
+</div>
+
+<hr>
+
+<h2>Add Product</h2>
+
+<div class="form">
+
+<input type="text" id="product_name" placeholder="Product Name">
+
+<input type="number" id="quantity" placeholder="Quantity">
+
+<input type="number" id="price" placeholder="Price">
+
+<button onclick="addProduct()">Add Product</button>
+
+</div>
+
+<hr>
+
+<h2>Products</h2>
+
+<input
+type="text"
+id="searchProduct"
+placeholder="Search Product"
+onkeyup="searchProducts()">
+
+<button onclick="loadProducts()">Refresh Products</button>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Product</th>
+
+<th>Quantity</th>
+
+<th>Price</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productTable">
+
+</tbody>
+
+</table>
+
+<hr>
+
+<h2>Add Sale</h2>
+
+<div class="form">
+
+<select id="product_id">
+
+<option value="">Select Product</option>
+
+</select>
+
+<input
+type="number"
+id="quantity_sold"
+placeholder="Quantity Sold">
+
+<input
+type="date"
+id="sale_date">
+
+<button onclick="addSale()">
+
+Add Sale
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>Sales History</h2>
+
+<button onclick="loadSales()">
+
+Refresh Sales
+
+</button>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Sale ID</th>
+
+<th>Product ID</th>
+
+<th>Quantity</th>
+
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody id="salesTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
