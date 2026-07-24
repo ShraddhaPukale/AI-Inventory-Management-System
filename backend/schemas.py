@@ -25,12 +25,37 @@ class SaleBase(BaseModel):
     sale_date: date
 
 
-class SaleCreate(SaleBase):
-    pass
+class SaleCreate(BaseModel):
+    product_id: int
+    quantity_sold: int
+    sale_date: date
 
 
 class Sale(SaleBase):
     sale_id: int
+
+    class Config:
+        from_attributes = True
+
+
+# ---------------- User Schemas ----------------
+
+class UserBase(BaseModel):
+    username: str
+    email: str
+
+
+class UserCreate(UserBase):
+    password: str
+
+
+class UserLogin(BaseModel):
+    email: str
+    password: str
+
+
+class UserResponse(UserBase):
+    id: int
 
     class Config:
         from_attributes = True

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales History</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard">
+
+        <h1>Sales History</h1>
+
+        <button onclick="window.location.href='dashboard.html'">
+            ← Dashboard
+        </button>
+
+        <br><br>
+
+        <h2>Add New Sale</h2>
+
+        <div class="product-form">
+
+            <label><b>Select Product:</b></label>
+
+            <select id="productSelect">
+            </select>
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity Sold"
+                min="1"
+            >
+
+            <button onclick="addSale()">
+                Add Sale
+            </button>
+
+        </div>
+
+        <br><br>
+
+        <table id="salesTable">
+
+            <thead>
+
+                <tr>
+                    <th>Sale ID</th>
+                    <th>Product ID</th>
+                    <th>Quantity Sold</th>
+                    <th>Sale Date</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="sales.js"></script>
+
+</body>
+
+</html>

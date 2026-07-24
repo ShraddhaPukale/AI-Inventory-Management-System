@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Inventory Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard">
+
+        <h1>🤖 AI Inventory Management System</h1>
+        
+        <p id="welcomeUser" style="font-size:22px; margin-top:10px; color:#555;">
+            Welcome, Admin 👋
+        </p>
+
+        <p id="currentDate" style="font-size:18px; color:#777;">
+            Loading Date...
+        </p>
+
+        <div id="stockAlert" class="stock-alert">
+            Loading Stock Status...
+        </div>
+
+        <!-- Stock Distribution -->
+        <div class="card" style="width:90%; margin:30px auto;">
+            <h2>Stock Distribution</h2>
+            <canvas id="stockChart"></canvas>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="card-container">
+
+            <div class="card">
+                <h2>📦 Total Products</h2>
+                <p id="products">0</p>
+            </div>
+
+            <div class="card">
+                <h2>💰 Total Sales</h2>
+                <p id="sales">0</p>
+            </div>
+
+            <div class="card">
+                <h2>👤 Logged In User</h2>
+                <p id="user">Admin</p>
+            </div>
+
+            <div class="card">
+                <h2>🤖 AI Inventory Prediction</h2>
+
+                <p>Total Products:
+                    <span id="totalProducts">0</span>
+                </p>
+
+                <p>Low Stock:
+                    <span id="lowStock">0</span>
+                </p>
+
+                <p>Out Of Stock:
+                    <span id="outOfStock">0</span>
+                </p>
+
+                <p>Healthy Products:
+                    <span id="healthyProducts">0</span>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Sales Analytics -->
+        <div class="card" style="width:90%; margin:30px auto;">
+
+            <h2>Sales Analytics</h2>
+
+            <canvas id="salesChart"></canvas>
+
+        </div>
+
+        <!-- Monthly Sales Trend -->
+        <div class="card" style="width:90%; margin:30px auto;">
+
+            <h2>📈 Monthly Sales Trend</h2>
+
+            <canvas id="monthlySalesChart"></canvas>
+
+        </div>
+
+        <div class="card" style="width:90%; margin:30px auto;">
+
+        <h2>🕒 Recent Sales Activity</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="recentSales">
+            </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Top Selling Products -->
+        <div class="card" style="width:90%; margin:30px auto;">
+
+            <h2>🏆 Top Selling Products</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Product</th>
+                        <th>Total Sold</th>
+                    </tr>
+                </thead>
+
+                <tbody id="topProducts">
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <button onclick="window.location.href='products.html'">
+            Products
+        </button>
+
+        <button onclick="window.location.href='sales.html'">
+            Sales History
+        </button>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <footer style="text-align:center; padding:20px; color:#777; margin-top:40px;">
+
+    © 2026 AI Inventory Management System
+
+    <br>
+
+    Developed by Shraddha Pukale
+
+    </footer>
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
