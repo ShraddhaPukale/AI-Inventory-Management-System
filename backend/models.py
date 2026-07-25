@@ -27,4 +27,4 @@ class User(Base):
     username = Column(String(100), unique=True, index=True)
     email = Column(String(100), unique=True, index=True)
     password = Column(String(255))
-    role=Column(String(20),default="staff")
+    role=Column(String(20),default="admin")
