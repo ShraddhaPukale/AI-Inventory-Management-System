@@ -288,4 +288,3 @@ function loadDate() {
 }
 
 
-loadDashboard();

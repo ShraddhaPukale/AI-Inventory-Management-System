@@ -284,3 +284,10 @@ button:hover{
     border:1px solid #ccc;
     font-size:16px;
 }
+
+#stockChart{
+    width: 350px !important;
+    height: 350px !important;
+    margin: 0 auto;
+    display: block;
+}
