@@ -6,7 +6,7 @@ import models
 import schemas
 from auth import create_access_token
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 
 # ==========================
